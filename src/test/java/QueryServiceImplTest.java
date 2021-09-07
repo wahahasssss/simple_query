@@ -18,6 +18,7 @@ class QueryServiceImplTest {
     @Autowired
     private QueryService queryService;
 
+    //升序排序测试
     @Test
     void queryAsc(){
         QueryParamDto ascParam = buildAscParam();
@@ -28,6 +29,7 @@ class QueryServiceImplTest {
         assert results != null;
     }
 
+    //降序排序测试
     @Test
     void query(){
         QueryParamDto descParam = buildDescParam();
@@ -39,6 +41,7 @@ class QueryServiceImplTest {
     }
 
 
+    //多字段条件 与 测试
     @Test
     void queryMultiField(){
         QueryParamDto descParam = buildMultiFiledParam();
